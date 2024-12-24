@@ -1,8 +1,36 @@
+@import 'variables'; 
+@import 'mixins'; 
+
 body {
   margin: 0;
   background-color: #f9f9f9;
 }
 
+.main{
+  font-family: $font-family;
+  padding: 0 48px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: $title-font-size-lg; // Kích thước mặc định cho h1 (dành cho màn hình lớn)
+
+  @include respond-to(sm) {
+    font-size: $title-font-size-sm; // Màn hình nhỏ
+  }
+
+  @include respond-to(md) {
+    font-size: $title-font-size-md; // Màn hình vừa
+  }
+
+  @include respond-to(lg) {
+    font-size: $title-font-size-lg; // Màn hình lớn
+  }
+
+  @include respond-to(xl) {
+    font-size: $title-font-size-xl; // Màn hình extra large
+  }
+}
 
 .container {
   display: flex;

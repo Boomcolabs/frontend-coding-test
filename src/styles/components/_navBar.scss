@@ -1,0 +1,70 @@
+@import '../variables';
+@import '../mixins';
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    background-color: $background-color;
+
+    .nav-left,
+    .nav-right {
+        display: none; // Default hidden
+
+        .icon {
+            font-size: 24px;
+            color: $text-color;
+            cursor: pointer;
+        }
+    }
+
+    .nav-logo {
+        .logo {
+            width: 100px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+            font-size: $font-size-base;
+            font-weight: $font-weight-medium;
+            @include transition(color);
+
+            &:hover {
+                color: $primary-hover-color;
+            }
+        }
+    }
+
+    .nav-button {
+        @include style-button();
+    }
+
+    // Responsive styles
+    @include respond-to(md) {
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+        }
+
+        .nav-logo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-links,
+        .nav-button {
+            display: none; // Hide on mobile
+        }
+    }
+}

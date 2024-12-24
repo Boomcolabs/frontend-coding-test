@@ -1,0 +1,135 @@
+@import '../variables';
+@import '../mixins';
+
+.model-list {
+    display: flex;
+    flex-direction: column;
+    margin-block: 64px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-size: $title-font-size-xl;
+            font-weight: bold;
+        }
+
+        .view-all-button {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: darken($background-color, 10%);
+                transform: scale(1.05);
+            }
+
+            svg {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .model-grid {
+        display: flex;
+        gap: 32px;
+
+        .model-card {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 32px;
+
+            img {
+                width: 300px;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            h2 {
+                font-size: 24px;
+                margin: 16px 0 8px;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 18px;
+                color: grey;
+            }
+        }
+    }
+
+    @include respond-to(lg) {
+        margin-block: 48px;
+
+        .header {
+            h1 {
+                font-size: $title-font-size-lg;
+            }
+        }
+
+        .model-grid {
+            .model-card {
+                img {
+                    width: 200px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    @include respond-to(md) {
+        margin-block: 36px;
+
+        .header {
+            h1 {
+                font-size: $title-font-size-md;
+            }
+        }
+        .model-grid {
+            .model-card {
+                img {
+                    width: 150px;
+                    height: 200px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @include respond-to(sm) {
+        margin-block: 24px;
+
+        .header {
+            h1 {
+                font-size: $title-font-size-sm;
+            }
+
+            .view-all-button {
+                background-color: transparent;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}
