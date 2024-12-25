@@ -1,0 +1,161 @@
+@import '../variables';
+@import '../mixins';
+
+.main {
+    font-family: $font-family;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    .todo-list-title {
+        width: 80%;
+        background-color: $todo-background-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 32px;
+        border-radius: 10px;
+        margin-block: 32px;
+        color: $background-color;
+    }
+}
+
+.todo-vertical-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .todo-vertical-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 8px 16px;
+        background-color: $background-color;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: darken($background-color, 10%);
+        }
+
+        p {
+            font-size: 16px;
+            flex-basis: 100%;
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;  
+
+            &:hover {
+                background-color: darken($background-color, 10%);
+            }
+        }
+
+        input[type="checkbox"]:checked+p {
+            text-decoration: line-through;
+            color: grey; // Đổi màu chữ nếu cần
+        }
+    }
+}
+
+.add-todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80%;
+
+    input[type="text"] {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 8px;
+        width: 80%;
+    }
+
+    input[type="text"]:focus {
+        border: 1px solid $primary-color;
+    }
+
+    button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: darken($background-color, 10%);
+        }
+    }
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modal-content {
+        background: white;
+        padding: 24px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+
+            button {
+                padding: 8px 16px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:first-child {
+                    background-color: red;
+                    color: white;
+                }
+
+                &:last-child {
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
+}
