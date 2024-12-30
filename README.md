@@ -138,6 +138,7 @@ curl -X DELETE "http://3.1.8.111:8080/todo" \
     - Once your tasks are completed, push your branch and create a Pull Request (PR) to your forked repository.
     - In the PR description, include:
         - A summary of the work you’ve done.
+        - The time you first gain access to the Figma file in the format of HH:mm dd/MM/yyyy (Ex: 14:30 30/12/2024)
         - Time taken for each task.
         - Design/UX/UI improvements (if applicable).
         - Any issues faced and how they were resolved.
