@@ -1,0 +1,229 @@
+.main {
+    background-color: #f9fafb;
+    margin: 0;
+    width: 100%;
+    overflow-y: hidden;
+
+    .slider {
+        width: 100%;
+        height: 676px;
+        margin-top: 80px;
+        .slider-content {
+            width: 90%;
+            padding: 20px;
+            margin: 0 auto;
+            .slider-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .slider-bot {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .second-banner {
+        width: 100%;
+        .second-content {
+            width: 90%;
+            padding: 80px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .res-content {
+                display: none;
+            }
+            .left-content {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            .right-content {
+                width: 50%;
+                position: relative;
+                .right-image {
+                    width: 100%;
+                    .right-banner {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                }
+                .right-item {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    top: 32px;
+                    right: 32px;
+                    width: 60%;
+                    div {
+                        text-align: end;
+                    }
+                }
+            }
+        }
+    }
+    .third-banner {
+        width: 100%;
+        position: relative;
+        .third-model {
+            width: 100%;
+            height: auto;
+        }
+        .third-title {
+            position: absolute;
+            z-index: 1;
+            width: 80%;
+            left: 200px;
+            // height: 300px;
+            top: 300px;
+            .third-content {
+                display: flex;
+                flex-direction: column;
+                .third-logo {
+                    width: 303.88px;
+                    height: 80px;
+                }
+                .third-item {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 24px;
+                    gap: 10px;
+                    .third-options {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        align-items: center;
+                        .tick {
+                            width: 24px;
+                            height: 32px;
+                        }
+                        p {
+                            font-size: 24px;
+                            font-weight: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-end {
+        width: 100%;
+        background-color: #f3f4f6;
+        .end-div {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            .footer-left {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                .small-logo {
+                    width: 31.73px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+    @media (max-width: 900px) {
+        .banner {
+            width: 95%;
+            margin: 0 auto;
+            .banner-model {
+                border-radius: 8px;
+            }
+            .banner-title {
+                .title-content {
+                    width: 80%; // Tăng chiều rộng
+                    right: 20px; // Điều chỉnh vị trí
+                    top: 20px;
+                }
+            }
+        }
+        .slider {
+            margin-top: 20px;
+            height: 500px;
+            .slider-content {
+                .slider-bot {
+                    .slide {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+        .second-banner {
+            .second-content {
+                padding: 20px;
+                flex-direction: column;
+                margin: 0 auto;
+                gap: 20px;
+                .right-content {
+                    width: 100%;
+                    .right-item {
+                        .second-nav {
+                            display: none;
+                        }
+                    }
+                }
+                .left-content {
+                    display: none;
+                }
+                .res-content {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        .third-banner {
+            .third-title {
+                width: 50%;
+                left: 20px;
+                top: 30px;
+                .third-content {
+                    .third-logo {
+                        width: 151.94px;
+                        height: 40px;
+                    }
+                    .third-item {
+                        margin-top: 10px;
+
+                        .third-options {
+                            height: 36px;
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card {
+            .card-banner {
+                width: 90%;
+            }
+        }
+        .footer {
+            .footer-content {
+                flex-wrap: wrap;
+                gap: 10%;
+                .footer-item {
+                    margin-top: 40px;
+                    width: 45%;
+                    img {
+                        display: none;
+                    }
+                }
+                .footer-info {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

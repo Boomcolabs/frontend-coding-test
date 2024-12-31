@@ -1,0 +1,29 @@
+/* Slider container */
+.slider-item {
+    display: flex;
+    overflow: hidden;
+    width: 110%;
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: smooth;
+    margin-left: -5%;
+}
+
+.slider-item:active {
+    cursor: grabbing;
+}
+
+/* Slide item */
+.slide {
+    flex: 0 0 10%;
+    margin-right: 10px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide:last-child {
+    flex: 0 0 10%;
+    margin-right: 0;
+    //width: 21%;
+}
