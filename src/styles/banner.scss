@@ -1,0 +1,24 @@
+.banner {
+    width: 100%;
+    position: relative;
+    .banner-model {
+        width: 100%;
+        height: auto;
+    }
+    .banner-title {
+        position: absolute;
+        z-index: 1;
+        width: 66%;
+        right: 20px;
+        height: 300px;
+        top: 0;
+        .title-content {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            position: absolute;
+            right: 100px;
+            top: 100px;
+        }
+    }
+}
