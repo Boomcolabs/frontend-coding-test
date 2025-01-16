@@ -119,7 +119,7 @@ curl -X DELETE "http://3.1.8.111:8080/todo" \
 1. **Time Tracking**
 
     - Accurately record the time taken to complete each task:
-        - `/ladning-page` Page: Start Time → End Time
+        - `/landing-page` Page: Start Time → End Time
         - `/todo-list` page: Start Time → End Time
 
 2. **Design or UX/UI Improvements**
