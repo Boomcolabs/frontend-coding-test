@@ -1,0 +1,11 @@
+@import 'variables.scss';
+.carouselItem {
+    position: relative;
+    width: 700px;
+    flex: 1 0 100%;
+    background-color: map-get($color, white);
+    .content {
+        width: 100%;
+        position: absolute;
+    }
+}

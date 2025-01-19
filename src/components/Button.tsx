@@ -1,7 +1,7 @@
 import style from '@/styles/button.module.scss';
 import clsx from 'clsx';
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    content: string;
+    content?: string;
     status?: 'primary' | 'secondary' | 'white';
     size?: 'small' | 'medium' | 'large';
     icon?: React.ReactNode;

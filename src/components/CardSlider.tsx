@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
-import styles from '@/styles/carousel.module.scss';
+import styles from '@/styles/cardSlider.module.scss';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;

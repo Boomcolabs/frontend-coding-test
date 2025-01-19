@@ -40,3 +40,8 @@
     letter-spacing: 0.015px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
+
+.transparent {
+    @include button(transparent, map-get($color, black-100));
+    border: 1px solid map-get($color, black-200);
+}
