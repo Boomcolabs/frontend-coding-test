@@ -1,13 +1,16 @@
 @import 'variables.scss';
 
-@mixin button($bg-color: $color-black, $text-color: $color-white) {
+@mixin button(
+    $bg-color: map-get($color, black),
+    $text-color: map-get($color, white)
+) {
     background-color: $bg-color;
     color: $text-color;
     border: none;
-    border-radius: $radius-lg;
+    border-radius: map-get($radius, lg);
     cursor: pointer;
-    font-weight: $font-bold;
-    line-height: $leading-5;
+    font-weight: map-get($font, bold);
+    line-height: map-get($line-height, 5);
     font-family: inherit;
     @include buttonSize();
 }
@@ -15,24 +18,24 @@
 @mixin buttonSize() {
     &.medium {
         height: 48px;
-        padding: 0 16px;
-        font-size: $text-md;
+        padding: 0 map-get($gap, 4);
+        font-size: map-get($text-size, md);
     }
 
     &.large {
         height: 64px;
-        padding: 0 32px;
-        font-size: $text-lg;
+        padding: 0 map-get($gap, 8);
+        font-size: map-get($text-size, lg);
     }
 }
 
 .primary {
-    @include button($color-black-100);
+    @include button(map-get($color, black-100));
     letter-spacing: 0.069px;
 }
 
 .secondary {
-    @include button($color-white-200, $color-black-100);
+    @include button(map-get($color, white-200), map-get($color, black-100));
     padding: 0 16px !important;
     letter-spacing: 0.015px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);

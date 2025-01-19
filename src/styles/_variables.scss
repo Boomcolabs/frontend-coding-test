@@ -1,20 +1,44 @@
-$radius-md: 4px;
-$radius-lg: 8px;
+// Border Radius
+$radius: (
+    md: 4px,
+    lg: 8px,
+);
 
-$color-black: #000;
-$color-black-100: #111827;
-$color-black-200: #030712;
-$color-white: #fff;
-$color-white-100: #f9fafb;
-$color-white-200: #f3f4f6;
+// Colors
+$color: (
+    black: #000,
+    black-100: #111827,
+    black-200: #030712,
+    white: #fff,
+    white-100: #f9fafb,
+    white-200: #f3f4f6,
+    white-300: #374151,
+);
 
-$font-bold: 600;
+// Fonts
+$font: (
+    light: 400,
+    bold: 600,
+);
 
-$text-md: 14px;
-$text-lg: 18px;
+// Text Sizes
+$text-size: (
+    md: 14px,
+    lg: 18px,
+    xl: 20px,
+);
 
-$leading-4: 16px;
-$leading-5: 20px;
+// Line Heights
+$line-height: (
+    4: 16px,
+    5: 20px,
+    7: 28px,
+);
 
-$gap-1: 4px;
-$gap-2: 8px;
+// Gaps
+$gap: (
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+);

@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.cardItem {
+    .image {
+        width: 287.47px;
+        height: 360px;
+        border-radius: map-get($radius, lg);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .info {
+        h3 {
+            font-size: map-get($text-size, xl);
+            margin-top: 10px;
+            margin-bottom: 2px;
+            line-height: map-get($line-height, 7);
+            color: map-get($color, black-100);
+        }
+
+        p {
+            margin: 0;
+            font-family: var(--font-inter);
+            color: map-get($color, white-300);
+            font-weight: map-get($font, light);
+            line-height: map-get($line-height, 5);
+        }
+    }
+}
