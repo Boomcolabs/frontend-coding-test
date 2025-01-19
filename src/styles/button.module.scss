@@ -1,0 +1,39 @@
+@import 'variables.scss';
+
+@mixin button($bg-color: $color-black, $text-color: $color-white) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: $radius-lg;
+    cursor: pointer;
+    font-weight: $font-bold;
+    line-height: $leading-5;
+    font-family: inherit;
+    @include buttonSize();
+}
+
+@mixin buttonSize() {
+    &.medium {
+        height: 48px;
+        padding: 0 16px;
+        font-size: $text-md;
+    }
+
+    &.large {
+        height: 64px;
+        padding: 0 32px;
+        font-size: $text-lg;
+    }
+}
+
+.primary {
+    @include button($color-black-100);
+    letter-spacing: 0.069px;
+}
+
+.secondary {
+    @include button($color-white-200, $color-black-100);
+    padding: 0 16px !important;
+    letter-spacing: 0.015px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
