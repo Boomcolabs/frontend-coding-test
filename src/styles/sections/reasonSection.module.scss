@@ -1,0 +1,106 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.reasonSection {
+    background-image: url('../../../public/images/sections/reasons-section-bg.png');
+    @include bgSetup();
+    position: relative;
+    height: 600px;
+    padding: 80px;
+    .shape {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        scale: 1.1;
+        width: 629px;
+        height: 397px;
+        background-position: center;
+        @include bgSetup();
+        background-image: url('../../../public/images/sections/reasons-section-shape.png');
+    }
+
+    .content {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 128px;
+        gap: map-get($gap, 6);
+        max-width: 80%;
+        h1 {
+            @include title();
+            padding: 8px 0;
+        }
+
+        .reason {
+            display: flex;
+            align-items: center;
+            gap: map-get($gap, 4);
+
+            span {
+                @include titleMobile();
+                font-weight: map-get($font, light);
+                color: map-get($color, gray-800);
+            }
+        }
+    }
+}
+
+@include responsiveSm {
+    .reasonSection {
+        padding: 20px 0;
+        background-size: cover;
+        background-position: center;
+        height: 304px;
+        .shape {
+            scale: 1;
+            top: 0;
+            width: 249px;
+            height: 235px;
+            background-image: url('../../../public/images/sections/reason-section-shape-mobile.png');
+        }
+
+        .content {
+            padding: 0 20px;
+            max-width: 75%;
+            gap: map-get($gap, 2);
+
+            h1 {
+                @include titleMobile();
+                padding: 0;
+            }
+
+            > img {
+                width: 151.94px;
+                height: 40px;
+            }
+
+            .reason {
+                display: flex;
+                align-items: start;
+                gap: map-get($gap, 2);
+
+                .checkboxContainer {
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                }
+                span {
+                    font-size: map-get($text-size, base);
+                    line-height: map-get($line-height, 6);
+                    font-weight: map-get($font, light);
+                }
+            }
+        }
+    }
+}
+
+@include responsiveMd {
+    .reasonSection {
+        padding: 20px;
+        .content {
+            padding: 20px;
+        }
+    }
+}

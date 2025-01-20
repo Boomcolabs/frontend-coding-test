@@ -1,0 +1,25 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    background-color: map-get($color, white-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: map-get($radius, lg);
+}
+
+@include responsiveSm {
+    .checkbox {
+        width: 16px;
+        height: 16px;
+        border-radius: map-get($radius, 2xl);
+
+        img {
+            height: 8px;
+            width: 8px;
+        }
+    }
+}
