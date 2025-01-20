@@ -21,6 +21,12 @@
 }
 
 @mixin buttonSize() {
+    &.small {
+        height: 24px;
+        padding: 0 map-get($gap, 2);
+        font-size: map-get($text-size, sm);
+    }
+
     &.medium {
         height: 48px;
         padding: 0 map-get($gap, 4);

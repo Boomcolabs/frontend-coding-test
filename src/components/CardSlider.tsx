@@ -17,28 +17,44 @@ export default function CardSlider({ children }: Props) {
         const sliderRef = slider.current;
         if (!sliderRef) return;
 
-        const handleMouseDown = (e: MouseEvent) => startDragging(e);
+        // Mouse events
+        const handleMouseDown = (e: MouseEvent) => startDragging(e.pageX);
         const handleMouseLeave = () => stopDragging();
         const handleMouseUp = () => stopDragging();
-        const handleMouseMove = (e: MouseEvent) => dragCarousel(e);
+        const handleMouseMove = (e: MouseEvent) => dragCarousel(e.pageX);
+
+        // Touch events
+        const handleTouchStart = (e: TouchEvent) =>
+            startDragging(e.touches[0].pageX);
+        const handleTouchEnd = () => stopDragging();
+        const handleTouchMove = (e: TouchEvent) =>
+            dragCarousel(e.touches[0].pageX);
 
         sliderRef.addEventListener('mousedown', handleMouseDown);
         sliderRef.addEventListener('mouseleave', handleMouseLeave);
         sliderRef.addEventListener('mouseup', handleMouseUp);
         sliderRef.addEventListener('mousemove', handleMouseMove);
 
+        sliderRef.addEventListener('touchstart', handleTouchStart);
+        sliderRef.addEventListener('touchend', handleTouchEnd);
+        sliderRef.addEventListener('touchmove', handleTouchMove);
+
         return () => {
             sliderRef.removeEventListener('mousedown', handleMouseDown);
             sliderRef.removeEventListener('mouseleave', handleMouseLeave);
             sliderRef.removeEventListener('mouseup', handleMouseUp);
             sliderRef.removeEventListener('mousemove', handleMouseMove);
+
+            sliderRef.removeEventListener('touchstart', handleTouchStart);
+            sliderRef.removeEventListener('touchend', handleTouchEnd);
+            sliderRef.removeEventListener('touchmove', handleTouchMove);
         };
     }, []);
 
-    const startDragging = (e: MouseEvent) => {
+    const startDragging = (startPosition: number) => {
         if (!slider.current) return;
         isDragging.current = true;
-        startX.current = e.pageX - slider.current.offsetLeft;
+        startX.current = startPosition - slider.current.offsetLeft;
         scrollStart.current = slider.current.scrollLeft;
     };
 
@@ -46,17 +62,15 @@ export default function CardSlider({ children }: Props) {
         isDragging.current = false;
     };
 
-    const dragCarousel = (e: MouseEvent) => {
+    const dragCarousel = (currentPosition: number) => {
         if (!isDragging.current || !slider.current) return;
-        e.preventDefault();
-        const x = e.pageX - slider.current.offsetLeft;
-        const distanceDragged = x - startX.current;
+        const distanceDragged = currentPosition - startX.current;
         slider.current.scrollLeft = scrollStart.current - distanceDragged;
     };
 
     return (
-        <div className={styles.carousel} ref={slider}>
-            <div className={styles.carouselTrack}>{children}</div>
+        <div className={styles.cardSlider} ref={slider}>
+            <div className={styles.cardSliderTrack}>{children}</div>
         </div>
     );
 }

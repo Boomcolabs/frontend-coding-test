@@ -32,7 +32,7 @@ export default function Button({
                     gap: icon && content ? '8px' : '0',
                 }}
             >
-                <span>{content}</span> {icon}
+                {content && <span>{content}</span>} {icon}
             </div>
         </button>
     );

@@ -1,12 +1,12 @@
 @import 'variables.scss';
 
-.carousel {
+.cardSlider {
     position: relative;
     max-width: 100%;
     overflow: hidden;
     user-select: none;
 
-    .carouselTrack {
+    .cardSliderTrack {
         display: flex;
         gap: map-get($gap, 4);
         will-change: transform;
@@ -14,10 +14,5 @@
         cursor: pointer;
         width: 100%;
         height: fit-content;
-    }
-
-    .carouselItem {
-        text-align: center;
-        pointer-events: none;
     }
 }

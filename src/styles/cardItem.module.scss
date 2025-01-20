@@ -24,6 +24,7 @@
             color: map-get($color, white-300);
             font-weight: map-get($font, light);
             line-height: map-get($line-height, 5);
+            opacity: 0.6;
         }
     }
 }

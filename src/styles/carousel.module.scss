@@ -1,4 +1,6 @@
 @import 'variables.scss';
+@import 'mixin.scss';
+
 .carousel {
     position: relative;
     display: flex;
@@ -34,6 +36,7 @@
 .carouselWrapper {
     display: flex;
     transition: all 0.3s ease-in-out;
+    width: 100%;
 }
 
 @mixin indicator($opacity: 0.2) {
@@ -59,5 +62,20 @@
     .activeIndicator {
         @include indicator(1);
         width: 28px;
+    }
+}
+
+@include responsiveSm {
+    .carousel {
+        .buttonContainer {
+            .button {
+                display: none;
+            }
+        }
+    }
+
+    .indicatorContainer {
+        right: 20px;
+        bottom: 20px;
     }
 }
