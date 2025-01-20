@@ -4,6 +4,7 @@ import christine from '../../../public/images/models/christine.png';
 import daron from '../../../public/images/models/daron.png';
 import Carousel from '@/components/Carousel';
 import React from 'react';
+import FirstSection from '@/components/sections/FirstSection';
 
 export default function LandingPage() {
     const slides = [
@@ -25,7 +26,7 @@ export default function LandingPage() {
     ];
     return (
         <div className="main">
-            Task 1
+            <FirstSection />
             {/* <div
                 style={{
                     width: '712px',

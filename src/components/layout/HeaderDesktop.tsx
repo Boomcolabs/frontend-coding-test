@@ -14,7 +14,13 @@ type Props = {
 export default function HeaderDesktop({ items }: Props) {
     return (
         <header className={style.headerDesktop}>
-            <Image alt="logo" src={logo} />
+            <Image
+                alt="logo"
+                src={logo}
+                style={{
+                    marginTop: '8px',
+                }}
+            />
 
             <div className={style.headerContent}>
                 {items.map((item, index) => (

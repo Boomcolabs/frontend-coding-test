@@ -1,0 +1,90 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.firstSection {
+    margin-top: 64px;
+    height: 645px;
+    position: relative;
+    background-image: url('../../../public/images/sections/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .content {
+        position: absolute;
+        right: 80px;
+        top: 0;
+        bottom: 0;
+        width: 980px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 208px;
+        padding-right: 80px;
+        gap: map-get($gap, 6);
+        h1 {
+            font-weight: map-get($font, bold);
+            font-size: map-get($text-size, 7xl);
+            line-height: map-get($line-height, 18);
+        }
+
+        p {
+            font-size: map-get($text-size, 2xl);
+            line-height: map-get($line-height, 8);
+            color: map-get($color, white-300);
+        }
+    }
+}
+
+@include responsiveSm {
+    .firstSection {
+        height: 240px;
+        background-image: url('../../../public/images/sections/banner-mobile.png');
+        border-radius: map-get($radius, 2xl);
+        .content {
+            right: 0;
+            padding: 0;
+            width: 207px;
+            gap: map-get($gap, 2);
+            h1 {
+                font-size: map-get($text-size, xl);
+                line-height: map-get($line-height, 6);
+            }
+
+            p {
+                font-size: map-get($text-size, sm);
+                line-height: map-get($line-height, 4);
+            }
+
+            button {
+                height: 48px;
+                padding: 0 28px;
+                span {
+                    font-size: map-get($text-size, md);
+                    line-height: map-get($line-height, 4);
+                }
+            }
+        }
+    }
+    .firstSectionMobile {
+        padding: 4px 24px;
+    }
+}
+
+@include responsiveMd {
+    .firstSection {
+        .content {
+            padding: 40px;
+            right: 0;
+            padding-left: 33%;
+            h1 {
+                font-size: map-get($text-size, 4xl);
+                line-height: map-get($line-height, 10);
+            }
+
+            p {
+                font-size: map-get($text-size, xl);
+                line-height: map-get($line-height, 6);
+            }
+        }
+    }
+}
