@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
 .cardItem {
     .image {
@@ -15,16 +16,35 @@
             margin-top: 10px;
             margin-bottom: 2px;
             line-height: map-get($line-height, 7);
-            color: map-get($color, black-100);
         }
 
         p {
-            margin: 0;
             font-family: var(--font-inter);
             color: map-get($color, white-300);
             font-weight: map-get($font, light);
             line-height: map-get($line-height, 5);
             opacity: 0.6;
+        }
+    }
+}
+
+@include responsiveSm {
+    .cardItem {
+        .image {
+            width: 218px;
+            height: 273px;
+        }
+        .info {
+            h3 {
+                margin-bottom: 0;
+                font-size: map-get($text-size, base);
+                line-height: map-get($line-height, 6);
+            }
+
+            p {
+                font-size: map-get($text-size, sm);
+                line-height: map-get($line-height, 4);
+            }
         }
     }
 }

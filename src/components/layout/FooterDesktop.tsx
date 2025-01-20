@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import logo from '../../../public/images/Logo-full-big.png';
 import instagram from '../../../public/icons/socials/Instagram.png';
 import tikTok from '../../../public/icons/socials/TikTok.png';
@@ -6,13 +5,14 @@ import youTube from '../../../public/icons/socials/YouTube.png';
 import logoIcon from '../../../public/images/Logo-icon.png';
 import Dropdown from '../Dropdown';
 import style from '@/styles/layout/footerDesktop.module.scss';
+import MyImage from '../MyImage';
 
 export default function FooterDesktop() {
     return (
         <footer>
             <div className={style.footerContent}>
                 <div className={style.firstSection}>
-                    <Image width={248} height={52} alt="logo" src={logo} />
+                    <MyImage width={248} height={52} alt="logo" src={logo} />
                     <h6>WELTENTERS FZ LLC</h6>
                     <p>Contact Us</p>
                     <p>Privacy Policy</p>
@@ -30,22 +30,22 @@ export default function FooterDesktop() {
                 <div className={style.contactSection}>
                     <h6>SOCIAL</h6>
                     <div>
-                        <Image src={instagram} alt="instagram" />
-                        <Image
+                        <MyImage src={instagram} alt="instagram" />
+                        <MyImage
                             src={tikTok}
                             alt="tikTok"
                             style={{
                                 margin: '0 16px',
                             }}
                         />
-                        <Image src={youTube} alt="youTube" />
+                        <MyImage src={youTube} alt="youTube" />
                     </div>
                 </div>
             </div>
 
             <div className={style.copyRight}>
                 <div className={style.logo}>
-                    <Image src={logoIcon} alt="logoIcon" />
+                    <MyImage src={logoIcon} alt="logoIcon" />
                     <span>Copyright © 2024 - All right reserved</span>
                 </div>
                 <Dropdown hasBorder />

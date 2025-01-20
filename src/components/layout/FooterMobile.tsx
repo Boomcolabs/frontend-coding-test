@@ -1,11 +1,11 @@
 import style from '@/styles/layout/footerMobile.module.scss';
-import Image from 'next/image';
 import logoIcon from '../../../public/images/Logo-icon-big.png';
 import Button from '../Button';
 import Dropdown from '../Dropdown';
 import tikTok from '../../../public/icons/socials/TikTok.png';
 import youTube from '../../../public/icons/socials/YouTube.png';
 import instagram from '../../../public/icons/socials/Instagram.png';
+import MyImage from '../MyImage';
 
 export default function FooterMobile() {
     return (
@@ -22,7 +22,7 @@ export default function FooterMobile() {
             </div>
             <div className={style.firstSection}>
                 <div>
-                    <Image width={52} height={52} alt="logo" src={logoIcon} />
+                    <MyImage width={52} height={52} alt="logo" src={logoIcon} />
                     <h6>WELTENTERS FZ LLC</h6>
                 </div>
                 <div>
@@ -40,15 +40,15 @@ export default function FooterMobile() {
             </div>
             <div className={style.socialsSection}>
                 <div>
-                    <Image src={instagram} alt="instagram" />
-                    <Image
+                    <MyImage src={instagram} alt="instagram" />
+                    <MyImage
                         src={tikTok}
                         alt="tikTok"
                         style={{
                             margin: '0 16px',
                         }}
                     />
-                    <Image src={youTube} alt="youTube" />
+                    <MyImage src={youTube} alt="youTube" />
                 </div>
                 <Dropdown />
             </div>

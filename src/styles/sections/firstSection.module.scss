@@ -1,8 +1,11 @@
 @import '../variables.scss';
 @import '../mixin.scss';
 
-.firstSection {
+.firstSectionContainer {
     margin-top: 64px;
+}
+
+.firstSection {
     height: 645px;
     position: relative;
     background-image: url('../../../public/images/sections/banner.png');
@@ -22,9 +25,7 @@
         padding-right: 80px;
         gap: map-get($gap, 6);
         h1 {
-            font-weight: map-get($font, bold);
-            font-size: map-get($text-size, 7xl);
-            line-height: map-get($line-height, 18);
+            @include title();
         }
 
         p {
@@ -65,8 +66,8 @@
             }
         }
     }
-    .firstSectionMobile {
-        padding: 4px 24px;
+    .firstSectionContainer {
+        padding: 4px 20px;
     }
 }
 

@@ -3,7 +3,7 @@ import style from '@/styles/sections/firstSection.module.scss';
 
 export default function FirstSection() {
     return (
-        <div className={style.firstSectionMobile}>
+        <div className={style.firstSectionContainer}>
             <div className={style.firstSection}>
                 <div className={style.content}>
                     <h1>

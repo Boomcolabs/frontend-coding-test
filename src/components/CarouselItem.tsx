@@ -1,5 +1,6 @@
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 import style from '@/styles/carouselItem.module.scss';
+import MyImage from './MyImage';
 
 type Props = {
     item: {
@@ -12,7 +13,7 @@ type Props = {
 export default function CarouselItem({ item }: Props) {
     return (
         <div className={style.carouselItem}>
-            <Image
+            <MyImage
                 src={item.image}
                 alt="image"
                 style={{

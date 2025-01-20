@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import React, { useState } from 'react';
 import arrowLeft from '../../public/icons/20_icon/20px_arrow-bold-left.png';
 import arrowRight from '../../public/icons/20_icon/20px_arrow-bold-right.png';
 import style from '@/styles/carousel.module.scss';
+import MyImage from './MyImage';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode[];
@@ -52,10 +52,10 @@ export default function Carousel({ children, ...rest }: Props) {
             </div>
             <div className={style.buttonContainer}>
                 <div className={style.button} onClick={handlePrevious}>
-                    <Image src={arrowLeft} alt="arrow left" />
+                    <MyImage src={arrowLeft} alt="arrow left" />
                 </div>
                 <div className={style.button} onClick={handleNext}>
-                    <Image src={arrowRight} alt="arrow left" />
+                    <MyImage src={arrowRight} alt="arrow left" />
                 </div>
             </div>
         </div>
