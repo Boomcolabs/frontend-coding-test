@@ -1,0 +1,5 @@
+@import '../variables.scss';
+
+.footerContainer {
+    background-color: map-get($color, white-200);
+}

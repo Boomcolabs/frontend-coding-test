@@ -9,7 +9,7 @@ import style from '@/styles/layout/footerDesktop.module.scss';
 
 export default function FooterDesktop() {
     return (
-        <footer style={{ marginTop: '200px' }}>
+        <footer>
             <div className={style.footerContent}>
                 <div className={style.firstSection}>
                     <Image width={248} height={52} alt="logo" src={logo} />

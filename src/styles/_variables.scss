@@ -2,6 +2,7 @@
 $radius: (
     md: 4px,
     lg: 8px,
+    xl: 16px,
     2xl: 20px,
 );
 
@@ -35,6 +36,7 @@ $text-size: (
     2xl: 24px,
     4xl: 40px,
     5xl: 48px,
+    6xl: 60px,
     7xl: 72px,
 );
 
@@ -47,6 +49,7 @@ $line-height: (
     8: 32px,
     10: 40px,
     12: 48px,
+    15: 60px,
     18: 72px,
 );
 
@@ -60,6 +63,10 @@ $gap: (
     10: 40px,
     12: 48px,
     20: 80px,
+);
+
+$shadow: (
+    sm: 'box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
 );
 
 // Responsive

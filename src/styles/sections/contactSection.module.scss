@@ -1,0 +1,62 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+.contactSection {
+    margin: 80px auto;
+    width: 846px;
+    padding: 64px 80px;
+    @include bgSetup();
+    background-image: url('../../../public/images/sections/contact-section-bg.png');
+    border-radius: map-get($radius, xl);
+    text-align: center;
+
+    h1 {
+        font-weight: map-get($font, bold);
+        font-size: map-get($text-size, 6xl);
+        line-height: map-get($line-height, 15);
+        color: map-get($color, white);
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-weight: map-get($font, light);
+        font-size: map-get($text-size, lg);
+        line-height: map-get($line-height, 7);
+        color: map-get($color, white-200);
+        margin-bottom: 28px;
+    }
+}
+
+@include responsiveSm {
+    .contactSection {
+        margin: 20px;
+        width: calc(100% - 40px);
+        padding: 28px;
+        h1 {
+            font-weight: map-get($font, medium);
+            font-size: map-get($text-size, 2xl);
+            line-height: map-get($line-height, 8);
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: map-get($text-size, sm);
+            line-height: map-get($line-height, 4);
+            margin-bottom: 20px;
+        }
+
+        button {
+            height: 48px !important;
+
+            span {
+                font-size: map-get($text-size, md);
+            }
+        }
+    }
+}
+
+@include responsiveMd {
+    .contactSection {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
