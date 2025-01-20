@@ -1,16 +1,19 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
 .select {
     padding: 0 12px;
-    border: 1px solid map-get($color, black-200);
     border-radius: map-get($radius, lg);
     display: inline-flex;
     align-items: center;
     gap: map-get($gap, 2);
     cursor: pointer;
     font-size: map-get($text-size, md);
-    font-weight: map-get($font, bold);
+    font-weight: map-get($font, medium);
     height: 32px;
     line-height: map-get($line-height, 4);
     box-sizing: border-box;
+}
+.border {
+    @include border();
 }

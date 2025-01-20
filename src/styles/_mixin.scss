@@ -1,0 +1,38 @@
+@import 'variables.scss';
+
+@mixin responsiveSm() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+
+@mixin responsiveMd() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+
+@mixin responsiveLg() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+
+@mixin fixedMenu() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@mixin border() {
+    border: 1px solid map-get($color, black-200);
+}
+
+@mixin footerItem($font-weight: map-get($font, light)) {
+    font-weight: $font-weight;
+    font-size: map-get($text-size, md);
+    line-height: map-get($line-height, 5);
+    cursor: pointer;
+}

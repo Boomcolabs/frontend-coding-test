@@ -1,0 +1,67 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.footerContent {
+    display: flex;
+    padding: 40px 80px;
+    gap: map-get($gap, 20);
+    border-bottom: 1px solid map-get($color, white-400);
+}
+
+.firstSection {
+    h6 {
+        margin: 8px 0;
+        @include footerItem(map-get($font, bold));
+    }
+
+    p {
+        @include footerItem();
+    }
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($gap, 2);
+    width: 264px;
+    h6 {
+        @include footerItem(map-get($font, bold));
+        opacity: 0.6;
+    }
+
+    p {
+        @include footerItem(map-get($font, light));
+    }
+}
+
+.copyRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 80px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: map-get($gap, 2);
+
+        span {
+            @include footerItem();
+            cursor: auto;
+        }
+    }
+}
+
+@include responsiveSm {
+    .footerContent,
+    .copyRight {
+        display: none;
+    }
+}
+
+@include responsiveMd {
+    .footerContent,
+    .copyRight {
+        padding: 20px;
+    }
+}

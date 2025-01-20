@@ -1,18 +1,23 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
 @mixin button(
     $bg-color: map-get($color, black),
     $text-color: map-get($color, white)
 ) {
     background-color: $bg-color;
-    color: $text-color;
     border: none;
     border-radius: map-get($radius, lg);
     cursor: pointer;
-    font-weight: map-get($font, bold);
+    font-weight: map-get($font, medium);
     line-height: map-get($line-height, 5);
     font-family: inherit;
+    width: fit-content;
     @include buttonSize();
+
+    span {
+        color: $text-color;
+    }
 }
 
 @mixin buttonSize() {
@@ -43,5 +48,8 @@
 
 .transparent {
     @include button(transparent, map-get($color, black-100));
-    border: 1px solid map-get($color, black-200);
+}
+
+.border {
+    @include border();
 }

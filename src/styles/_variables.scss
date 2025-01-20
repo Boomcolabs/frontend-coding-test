@@ -14,12 +14,14 @@ $color: (
     white-100: #f9fafb,
     white-200: #f3f4f6,
     white-300: #374151,
+    white-400: #e5e7eb,
 );
 
 // Fonts
 $font: (
     light: 400,
-    bold: 600,
+    medium: 600,
+    bold: 700,
 );
 
 // Text Sizes
@@ -42,4 +44,11 @@ $gap: (
     2: 8px,
     3: 12px,
     4: 16px,
+    10: 40px,
+    20: 80px,
 );
+
+// Responsive
+$res_320: 'only screen and (min-width: 320px) and (max-width: 768px)';
+$res_768: 'only screen and (min-width: 768px) and (max-width: 1024px)';
+$res_1024: 'only screen and (min-width: 1024px)';

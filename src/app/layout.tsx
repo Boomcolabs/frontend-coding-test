@@ -1,6 +1,9 @@
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { DM_Sans, Inter } from 'next/font/google';
+import '@/styles/global.scss';
 
 const DMSans = DM_Sans({
     subsets: ['latin'],
@@ -27,7 +30,9 @@ export default function RootLayout({
     return (
         <html lang="en" className={clsx(DMSans.variable, inter.variable)}>
             <body style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );

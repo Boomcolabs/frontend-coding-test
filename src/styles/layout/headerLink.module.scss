@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.headerLink {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    gap: map-get($gap, 2);
+
+    span {
+        font-size: map-get($text-size, md);
+        line-height: map-get($line-height, 5);
+        font-weight: map-get($font, medium);
+    }
+}

@@ -1,0 +1,27 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.headerMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: map-get($color, white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@include responsiveMd {
+    .headerMobile {
+        display: none;
+    }
+}
+
+@include responsiveLg {
+    .headerMobile {
+        display: none;
+    }
+}

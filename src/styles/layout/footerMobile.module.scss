@@ -1,0 +1,56 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.footerContent {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: map-get($gap, 10);
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($gap, 2);
+    width: 264px;
+    h6 {
+        @include footerItem(map-get($font, bold));
+        opacity: 0.6;
+    }
+
+    p {
+        @include footerItem(map-get($font, light));
+    }
+}
+
+.firstSection {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($gap, 4);
+    h6 {
+        margin-top: 8px;
+        @include footerItem(map-get($font, bold));
+    }
+
+    p {
+        @include footerItem();
+    }
+}
+
+.socialsSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@include responsiveMd {
+    .footerContent {
+        display: none;
+    }
+}
+
+@include responsiveLg {
+    .footerContent {
+        display: none;
+    }
+}
